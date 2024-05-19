@@ -1,0 +1,47 @@
+/* Ensure that the main div is a flex container */
+.mainDiv {
+          display: flex;
+          height: 100vh; /* Make it take full viewport height */
+          background-color: rgba(0, 0, 0, 0.745);
+          color: white;
+}
+        
+        /* Ensure that the pre and edi divs take equal space */
+        .previor, .editor {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden; /* Prevent content from overflowing */
+          padding: 10px;
+          box-sizing: border-box;
+        }
+        
+        /* Add a border to the pre to create a vertical line */
+        .previor {
+          border-left: 5px solid gray; /* Adjust color and width as needed */
+        }
+        
+        /* Ensure textarea fills the pre div */
+        textarea {
+          flex: 1;
+          width: 100%;
+          resize: none;
+          border: none;
+          padding: 10px;
+          box-sizing: border-box;
+          background-color: lightgray;
+        }
+        
+        /* Ensure long text wraps and does not overflow */
+        .previor{
+          word-wrap: break-word; /* Ensure long words break to the next line */
+          overflow: auto; /* Add a scrollbar if content overflows */
+        }
+        .edit-title, .prev-title {
+          background-color: gray;
+          border-radius: 1%;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-size: 21px;
+          text-align: center;
+}
+        
